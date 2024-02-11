@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Learn Lesson</title>
+</head>
+<body>
+	<h1>Welcome to lesson</h1>
+	<table>
+	 <thead>
+	    <tr> 
+	      <th>LessonId</th>
+	      <th>LessonName</th>
+	      <th>LessonTopics</th>
+	    </tr>
+	    <tr th:each="l:${Lessons}">
+	       <td th:text="${l.lessonId}"></td>
+	       <td th:text="${l.lessonName}"></td>
+	       <td th:text="${l.topics}"></td>
+	    </tr>
+	 </thead>
+	</table>
+	<form action="/goToLesson" method="post">
+		<label>Enter lesson Id</label> <br> <input type="text" name="lessonId"> 
+			
+			<input type="submit" value="Start Lesson">
+	</form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Course</title>
+  <style>
+    body {
+      background-color: #78b5d1;
+      margin: 0;
+      padding: 100px;
+    }
+
+    #login-form {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 55%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    li{
+      font-size: 30px;
+    }
+    table{
+      border-color: rgb(3, 15, 11);
+    }
+    h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: red;}
+  </style>
+</head>
+<body>
+ 
+  <h1><u>Create Course :</u></h1>
+    
+    <table>
+    
+  <form action="/createCourse" method="post">
+    <div class="mb-3">
+    <label for="courseId" class="form-label">Course Id</label>
+    <input type="text" class="form-control" name="courseId">
+  </div>
+  <div class="mb-3">
+    <label for="courseName" class="form-label">Course Name</label>
+    <input type="text" class="form-control" name="courseName">
+  </div>
+  <div class="mb-3">
+    <label for="coursePrice" class="form-label">Course price</label>
+    <input type="text" class="form-control" name="coursePrice">
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</table>
+    
+</body>
+</html>
+

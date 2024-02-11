@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: url('./registration.jpg')no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.registration-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+}
+.registration-form h1{
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.registration-form p{
+    font-size: 15px;
+    margin: 15px 0;
+}
+.registration-form input{
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+h1::first-letter{
+font-size: 90px;
+ color:  rgb(20, 202, 202);
+}
+h1{
+color:  rgb(132, 177, 177);
+}
+.registration-form bottom{
+    font-size: 50px;
+    font-weight:bold;
+    margin: 50px 0;
+    padding: 10px  15px;
+    width: 100%;
+    border-radius:20px;
+    background-color: #fff;
+
+}
+.registration-form button:hover{
+    color: red;
+}
+  </style>
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="reg.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Registration Form</h1>
+        <form action="/addUser" method="post">
+            
+            <label for="name" class="form-control">Name</label>
+            <input type="text" name="name" placeholder="User Name"><br>
+
+            <label for="exampleInputEmail1" class="from-label">Email address</label>
+            <input type="email" name="email" placeholder="Email" class="form-control" aria-describedby="emailHelp" id="username"><br>    
+            
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" placeholder="Password" id="password" class="form-control"><br><br>
+
+            
+            <label for="role">Role:</label> <select id="role" name="role" required><br><br>
+				<option value="">Select a role</option>
+				<option value="student">Student</option>
+				<option value="trainer">Trainer</option>
+			</select><br>
+			<br>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+    
+</body>
+</html>

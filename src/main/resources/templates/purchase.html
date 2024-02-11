@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Purchase</title>
+<style>
+body {
+	background-color: rgb(218, 206, 206);
+	margin: 0;
+	padding: 100px;
+}
+
+#login-form {
+	width: 300px;
+	margin: 0 auto;
+	background-color: #eee;
+	padding: 20px;
+}
+
+label {
+	display: block;
+}
+
+input {
+	width: 95%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+li {
+	font-size: 30px;
+}
+
+table {
+	border-color: aquamarine;
+}
+
+h1 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: red;
+}
+</style>
+</head>
+<body>
+	<h1>
+		<u>Purchase courses :</u>
+	</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>CourseId</th>
+				<th>CourseName</th>
+				<th>Course Price</th>
+				
+				<th>purchase</th>
+
+			</tr>
+		</thead>
+		<tr th:each="course:${courseList}">
+			<td th:text="${course.courseId}"></td>
+			<td th:text="${course.courseName}"></td>
+			<td th:text="${course.coursePrice}"></td>
+			
+			<td>
+				<button>
+					<a th:href="@{/payment(price=${course.coursePrice})}" > Buy Course </a>
+				</button>
+		</tr>
+	</table>
+
+
+
+
+	<h2>
+		<u>Java:</u>
+	</h2>
+	<img src="java.logo.png" alt="png" style="height: 70px; width: 50px;">
+	<p>
+		Java is a widely-used programming language for coding web
+		applications.<br> It has been a popular choice among developers
+		for over two decades, <br> with millions of Java applications in
+		use today. Java is a multi-platform, <br> object-oriented, and
+		network-centric language that can be used as a platform in itself.
+	</p>
+
+	<h2>
+		<u>Testing:</u>
+	</h2>
+	<img src="testing.jpg" alt="jpg" style="height: 90px; width: 70px;">
+	<p>
+		Software testing is the process of evaluating and verifying that a
+		software <br> product or application does what it is supposed to
+		do. The benefits of testing <br> include preventing bugs,
+		reducing development costs and improving performance.
+	</p>
+
+</body>
+</html>
+

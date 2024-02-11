@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Lesson</title>
+  <style>
+    body {
+      background-color: #78b5d1;
+      margin: 0;
+      padding: 100px;
+    }
+
+    #login-form {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 55%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    li{
+      font-size: 30px;
+    }
+    table{
+      border-color: rgb(3, 15, 11);
+    }
+    h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: red;}
+  </style>
+</head>
+<body>
+ 
+  <h1><u>Add lesson :</u></h1>
+    
+    
+    
+  <form action="/addlesson" method="post">
+    <div class="mb-3">
+    <label for="courseId" class="form-label">Course Id</label>
+    <input type="text" class="form-control" name="courseId">
+  </div>
+    
+    <div class="mb-3">
+    <label for="lessonId" class="form-label">Lesson Id</label>
+    <input type="text" class="form-control" name="lessonId">
+  </div>
+ 
+  <div class="mb-3">
+    <label for="lessonName" class="form-label">Lesson Name</label>
+    <input type="text" class="form-control" name="lessonName">
+  </div>
+  
+  <div class="mb-3">
+    <label for="topics" class="form-label">Lesson topics</label>
+    <input type="text" class="form-control" name="topics">
+  </div>
+  
+  <div class="mb-3">
+    <label for="link" class="form-label">Lesson Video Link</label>
+    <input type="text" class="form-control" name="link">
+  </div>
+  <button type="submit" class="btn btn-primary">AddLessons</button>
+</form>
+</body>
+</html>
+

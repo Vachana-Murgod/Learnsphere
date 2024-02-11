@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>View Course</title>
+</head>
+<body>
+<div>
+	<h1>Courses Details</h1>
+	<table border="1">
+	<thead>
+		<tr>
+			<th scope="col">Lesson Id</th>
+			<th scope="col">Lesson Name</th>
+			<th scope="col">Lesson Topics</th>
+			<th scope="col">Lesson Link</th>
+			<th scope="col">Course Id</th>
+		</tr>
+		</thead>
+		<tbody>
+		 <tr>
+		     <td th:text="${lesson.lessonId}"></td>
+		     <td th:text="${lesson.lessonName}"></td>
+		     
+		     <td th:text="${lesson.topics}"></td>
+		     <td th:text="${lesson.link}"></td>
+		     <td th:text="${lesson.course}"></td>
+		 </tr>
+		
+		</tbody>
+	</table>
+	</div>
+	<div class="container">
+	     <iframe width="200" height="200" 
+		 src="${lesson.link}" 
+		 title="YouTube video player" frameborder="0" 
+		 allow="accelerometer; autoplay; clipboard-write; 
+		 encrypted-media; gyroscope; picture-in-picture; 
+		 web-share" allowfullscreen> </iframe>
+    </div>
+    
+    <div class="container">
+    <form action="/addcomment" method="post">
+      <h2>Leave a comment here:</h2>
+      <textarea name="comment" ></textarea>
+      <input type="submit" value="add Comment">
+    </form>
+    </div>
+    <div class="container">
+    <h2>Comments:</h2>
+     </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Lesson</title>
+  <style>
+    body {
+      background-color: #78b5d1;
+      margin: 0;
+      padding: 100px;
+    }
+
+    #login-form {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 55%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    li{
+      font-size: 30px;
+    }
+    table{
+      border-color: rgb(3, 15, 11);
+    }
+    h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: red;}
+  </style>
+</head>
+<body>
+  <div>
+    <h1><u>Courses Details :</u></h1>
+    <table border="1">
+    <thead>
+      <tr>
+        <th>Course Id</th>
+        <th>Course Name</th>
+        <th>Course Price</th>
+        <th>Lesson</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="course:${courseList}">
+        <td th:text="${course.courseId}"></td>
+        <td th:text="${course.courseName}"></td>
+        <td th:text="${course.coursePrice}"></td>
+        <td th:each="lesson:${course.lessons}" th:text="${lesson.lessonName}"></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>   
+</body>
+</html>
+
